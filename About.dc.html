@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  body{margin:0;background:#E7E9EA}
+  a{color:#BF4A18}
+  a:hover{color:#8A5230}
+  img{display:block}
+  img{max-width:100%;height:auto}
+  h1,h2,h3,p,li{overflow-wrap:break-word}
+</style>
+</helmet>
+<div style="background:#E7E9EA;color:#2B3137;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:16px;line-height:1.62">
+<dc-import name="SiteNav" active="About" hint-size="100%,140px"></dc-import>
+
+<section style="max-width:1180px;margin:0 auto;padding:clamp(44px,7vw,64px) 20px 0">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:#6C747C;margin-bottom:16px">About the shop</div>
+  <h1 style="margin:0;font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05;text-transform:uppercase;color:#16191C;max-width:16ch">A small shop on the west side</h1>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:40px;margin-top:30px;align-items:start">
+    <div style="max-width:60ch">
+      <p style="margin:0 0 14px">T3 Design &amp; Fab is a welding and metal fabrication shop at 1255 Leonard Street NW in Grand Rapids. It is two of us. Tom runs the business side. His son Thomas does the welding and the fabrication, and holds a manufacturing engineering degree from Grand Rapids Community College. We have been at this since 2004.</p>
+      <p style="margin:0 0 14px">We are not a big operation and we do not want to be. We have a small shop with very good equipment, and we have put most of what we make back into it &mdash; the wheel machine, the rust repair tooling, the service truck. When you call, you talk to the person doing the work.</p>
+      <p style="margin:0">We also fix up bikes and give some of them away to kids who need one. That is not a marketing thing. It is just what happens when a bike shows up and it can be saved.</p>
+    </div>
+    <img src="photos/shop-interior-light.jpg" alt="The shop interior with equipment and daylight through the doorway" style="width:100%;aspect-ratio:3/2;object-fit:cover;border:1px solid #C4C9CD">
+  </div>
+</section>
+
+<section style="max-width:1180px;margin:0 auto;padding:clamp(40px,7vw,56px) 20px 0">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:#C4C9CD;border:1px solid #C4C9CD">
+    <div style="background:#F3F4F5;padding:22px 24px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6C747C;margin-bottom:7px">Established</div><div style="font-family:'Saira Condensed',sans-serif;font-size:30px;font-weight:600;color:#16191C;line-height:1">2004</div></div>
+    <div style="background:#F3F4F5;padding:22px 24px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6C747C;margin-bottom:7px">People in the shop</div><div style="font-family:'Saira Condensed',sans-serif;font-size:30px;font-weight:600;color:#16191C;line-height:1">Two</div></div>
+    <div style="background:#F3F4F5;padding:22px 24px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6C747C;margin-bottom:7px">On aluminum</div><div style="font-family:'Saira Condensed',sans-serif;font-size:30px;font-weight:600;color:#16191C;line-height:1">20 years</div></div>
+    <div style="background:#F3F4F5;padding:22px 24px"><div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6C747C;margin-bottom:7px">Locations</div><div style="font-family:'Saira Condensed',sans-serif;font-size:30px;font-weight:600;color:#16191C;line-height:1">Two</div><div style="font-size:13px;color:#6C747C;margin-top:4px">Leonard St plus an off-site industrial shop</div></div>
+  </div>
+</section>
+
+<section style="max-width:1180px;margin:0 auto;padding:clamp(40px,7vw,56px) 20px 0">
+  <div style="display:flex;gap:16px;align-items:baseline;margin-bottom:22px">
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#BF4A18;font-weight:500">01</span>
+    <h2 style="margin:0;font-family:'Saira Condensed',sans-serif;font-size:clamp(1.5rem,2.6vw,2rem);font-weight:600;text-transform:uppercase;color:#16191C">The people</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:#C4C9CD;border:1px solid #C4C9CD">
+    <div style="background:#F3F4F5;display:flex;flex-direction:column">
+      <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#DCDFE1 0 10px,#D2D6D9 10px 20px);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;color:#6C747C;line-height:1.7">[ portrait &mdash; Tom in the shop ]<br>to be photographed</span>
+      </div>
+      <div style="padding:18px 20px 22px">
+        <h3 style="margin:0 0 4px;font-family:'Saira Condensed',sans-serif;font-size:21px;font-weight:600;text-transform:uppercase;color:#16191C">Tom Hernon</h3>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6C747C;margin-bottom:9px">Owner &middot; Estimates &amp; scheduling</div>
+        <p style="margin:0;font-size:14.5px">Answers the phone, writes the quotes, and keeps the jobs moving. If you text a photo, this is who reads it.</p>
+      </div>
+    </div>
+    <div style="background:#F3F4F5;display:flex;flex-direction:column">
+      <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#DCDFE1 0 10px,#D2D6D9 10px 20px);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;color:#6C747C;line-height:1.7">[ portrait &mdash; Thomas welding ]<br>to be photographed</span>
+      </div>
+      <div style="padding:18px 20px 22px">
+        <h3 style="margin:0 0 4px;font-family:'Saira Condensed',sans-serif;font-size:21px;font-weight:600;text-transform:uppercase;color:#16191C">Thomas Hernon</h3>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6C747C;margin-bottom:9px">Welding, fabrication &amp; design</div>
+        <p style="margin:0;font-size:14.5px">TIG, MIG, and stick, plus the SolidWorks work. Manufacturing engineering degree from GRCC.</p>
+      </div>
+    </div>
+    <div style="background:#F3F4F5;display:flex;flex-direction:column">
+      <img src="photos/kid-drill-press.jpg" alt="A child in safety glasses at the drill press in the shop" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+      <div style="padding:18px 20px 22px">
+        <h3 style="margin:0 0 4px;font-family:'Saira Condensed',sans-serif;font-size:21px;font-weight:600;text-transform:uppercase;color:#16191C">Third generation</h3>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6C747C;margin-bottom:9px">Safety glasses required</div>
+        <p style="margin:0;font-size:14.5px">It is a family shop. Sometimes that is literal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1180px;margin:0 auto;padding:clamp(40px,7vw,56px) 20px 0">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:start">
+    <div>
+      <div style="display:flex;gap:16px;align-items:baseline;margin-bottom:18px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#BF4A18;font-weight:500">02</span>
+        <h2 style="margin:0;font-family:'Saira Condensed',sans-serif;font-size:clamp(1.5rem,2.6vw,2rem);font-weight:600;text-transform:uppercase;color:#16191C">Capability</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1px;background:#C4C9CD;border:1px solid #C4C9CD;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#2B3137">
+        <div style="background:#F3F4F5;padding:12px 16px">TIG, MIG, stick &mdash; aluminum and steel</div>
+        <div style="background:#F3F4F5;padding:12px 16px">Cast aluminum and cast iron repair</div>
+        <div style="background:#F3F4F5;padding:12px 16px">Wheel straightening &amp; refinishing machine</div>
+        <div style="background:#F3F4F5;padding:12px 16px">Motorcycle wheel machine, built in house</div>
+        <div style="background:#F3F4F5;padding:12px 16px">Machining, bending, mechanical repair</div>
+        <div style="background:#F3F4F5;padding:12px 16px">Forging &amp; blacksmithing, including blades</div>
+        <div style="background:#F3F4F5;padding:12px 16px">SolidWorks 3D modeling and drawings</div>
+        <div style="background:#F3F4F5;padding:12px 16px">Service truck &middot; pickup, delivery, car dolly</div>
+      </div>
+    </div>
+    <div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px">
+        <img src="photos/owner-bench-wheel.jpg" alt="Working at the bench on a wire spoked wheel" style="width:100%;aspect-ratio:1/1;object-fit:cover">
+        <img src="photos/shop-bikes-benches.jpg" alt="Shop interior with bikes and workbenches" style="width:100%;aspect-ratio:1/1;object-fit:cover">
+      </div>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#6C747C;margin:9px 0 0">1255 Leonard St NW &mdash; small shop, good equipment.</p>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1180px;margin:56px auto 0;padding:0 20px clamp(52px,8vw,80px)">
+  <div style="border:1px solid #C4C9CD;border-left:3px solid #BF4A18;background:#F3F4F5;padding:clamp(20px,5vw,28px) clamp(20px,5vw,30px);display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:center">
+    <div>
+      <h2 style="margin:0 0 8px;font-family:'Saira Condensed',sans-serif;font-size:26px;font-weight:600;text-transform:uppercase;color:#16191C">Come by the shop</h2>
+      <p style="margin:0;max-width:48ch">We are on Leonard between the corner store and the alley. Open weekends, which most shops are not.</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end">
+      <a href="Contact.dc.html" style="background:#BF4A18;color:#E7E9EA;text-decoration:none;padding:14px 22px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase" style-hover="background:#16191C">Hours &amp; directions</a>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,380px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<footer style="background:#16191C;color:#9AA2AA;font-family:'IBM Plex Sans',system-ui,sans-serif;border-top:3px solid #BF4A18">
+  <div style="max-width:1180px;margin:0 auto;padding:44px 20px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:28px 36px">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <span style="width:34px;height:34px;flex:none;background:#BF4A18;color:#E7E9EA;display:flex;align-items:center;justify-content:center;font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:21px">T3</span>
+        <span style="font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:#E7E9EA">Design &amp; Fab</span>
+      </div>
+      <p style="margin:0;font-size:14px;line-height:1.65;max-width:34ch">A two-person welding and metal fabrication shop on the west side of Grand Rapids. Since 2004.</p>
+    </div>
+
+    <div>
+      <button type="button" onClick="{{ toggleServices }}" style="{{ headBtn }}">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6C747C">Services</span>
+        <span style="{{ signServices }}">+</span>
+      </button>
+      <div style="{{ servicesBody }}">
+        <a href="Wheel-Repair.dc.html" style="color:#C6CBD0;text-decoration:none;font-size:14.5px;padding:3px 0" style-hover="color:#E8713C">Wheel &amp; Rim Repair</a>
+        <a href="Aluminum-Welding.dc.html" style="color:#C6CBD0;text-decoration:none;font-size:14.5px;padding:3px 0" style-hover="color:#E8713C">Aluminum &amp; Specialty Welding</a>
+        <a href="Rust-Repair.dc.html" style="color:#C6CBD0;text-decoration:none;font-size:14.5px;padding:3px 0" style-hover="color:#E8713C">Truck &amp; Auto Rust Repair</a>
+        <a href="Custom-Fabrication.dc.html" style="color:#C6CBD0;text-decoration:none;font-size:14.5px;padding:3px 0" style-hover="color:#E8713C">Custom Fabrication</a>
+        <a href="Design-Prototyping.dc.html" style="color:#C6CBD0;text-decoration:none;font-size:14.5px;padding:3px 0" style-hover="color:#E8713C">Design &amp; Prototyping</a>
+      </div>
+    </div>
+
+    <div>
+      <button type="button" onClick="{{ toggleShop }}" style="{{ headBtn }}">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6C747C">Shop</span>
+        <span style="{{ signShop }}">+</span>
+      </button>
+      <div style="{{ shopBody }}">
+        <span style="color:#C6CBD0;font-size:14.5px">1255 Leonard St NW<br>Grand Rapids, MI 49504</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#9AA2AA">Mon&ndash;Sat 9a&ndash;8p &middot; Sun by appt.</span>
+        <a href="About.dc.html" style="color:#C6CBD0;text-decoration:none;font-size:14.5px" style-hover="color:#E8713C">About the shop</a>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6C747C;margin-bottom:10px">Get a price</div>
+      <a href="tel:+16165898594" style="display:block;font-family:'Saira Condensed',sans-serif;font-size:clamp(26px,6vw,30px);font-weight:600;color:#E8713C;text-decoration:none;line-height:1.1;margin-bottom:10px">(616) 589-8594</a>
+      <a href="sms:+16165898594" style="display:inline-block;border:1px solid #6C747C;color:#E7E9EA;text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;padding:13px 16px" style-hover="border-color:#E8713C;color:#E8713C">Text a photo</a>
+    </div>
+  </div>
+  <div style="border-top:1px solid #2B3137">
+    <div style="max-width:1180px;margin:0 auto;padding:16px 20px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6C747C">
+      <span>&copy; 2026 T3 Design &amp; Fab</span>
+      <span>Mobile welding &middot; Pickup &amp; delivery &middot; Weekend hours</span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:380}}">
+class Component extends DCLogic {
+  state = { mobile: false, services: false, shop: false };
+
+  componentDidMount() {
+    this.sync = () => {
+      const m = window.innerWidth < 760;
+      if (m !== this.state.mobile) this.setState({ mobile: m });
+    };
+    this.sync();
+    window.addEventListener("resize", this.sync);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this.sync); }
+
+  renderVals() {
+    const { mobile, services, shop } = this.state;
+    const body = (open) =>
+      "display:" + (!mobile || open ? "flex" : "none") +
+      ";flex-direction:column;gap:8px;padding-top:" + (mobile ? "10px" : "2px");
+    const sign = (open) =>
+      "display:" + (mobile ? "block" : "none") +
+      ";font-family:'IBM Plex Mono',monospace;font-size:16px;color:#6C747C;line-height:1;transform:rotate(" +
+      (open ? "45deg" : "0deg") + ")";
+    return {
+      headBtn: "width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:transparent;border:0;padding:0 0 " +
+        (mobile ? "6px" : "2px") + ";cursor:" + (mobile ? "pointer" : "default") + ";min-height:" + (mobile ? "40px" : "0"),
+      servicesBody: body(services),
+      shopBody: body(shop),
+      signServices: sign(services),
+      signShop: sign(shop),
+      toggleServices: () => { if (this.state.mobile) this.setState((s) => ({ services: !s.services })); },
+      toggleShop: () => { if (this.state.mobile) this.setState((s) => ({ shop: !s.shop })); },
+    };
+  }
+}
+</script>
+</body>
+</html>
